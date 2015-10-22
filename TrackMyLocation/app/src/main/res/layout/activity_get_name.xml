@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="55dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#428f89"
+    tools:context="com.leanhippo.root.trackmylocation.GetNameActivity">
+
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text=""
+            android:hint="Please enter your name"
+            android:textSize="19sp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:id="@+id/nameEditText"
+            android:layout_gravity="center"
+            android:layout_marginTop="137dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Continue"
+            android:id="@+id/nameSubmitButton"
+            android:layout_gravity="center"
+            android:layout_below="@+id/nameEditText"
+            android:layout_centerHorizontal="true"
+            android:onClick="nameRegistration"
+            android:layout_marginTop="20dp"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="#F3843E"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=""
+        android:textColor="#FFF"
+        android:id="@+id/registerStatustextView"
+        android:layout_below="@+id/nameSubmitButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp" />
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/imageView2"
+        android:src="@drawable/icon"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

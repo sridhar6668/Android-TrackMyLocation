@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+
+    <item android:id="@+id/settings"
+        android:title="Settings"
+        android:icon="@drawable/settings"
+        app:showAsAction="always" />
+
+
+    <item android:id="@+id/faq"
+        android:title ="@string/faq"
+        android:icon="@drawable/info"
+        app:showAsAction="always" />
+
+    <!--
+    <item android:id="@+id/deleteCode"
+        android:title="@string/deleteCode"
+        app:showAsAction="never" />
+-->
+    <item android:id="@+id/gpLicense"
+        android:title="@string/google_play_license"
+        app:showAsAction="never" />
+
+</menu>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.leanhippo.root.trackmylocation"
+    android:versionCode="2"
+    android:versionName="2" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!--
+ The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:logo="@drawable/icon"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyAqCNyfmDOfYLvFJTCM_e_bRrFaLjpJ2ds" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:configChanges="orientation|screenSize"
+            android:icon="@drawable/icon"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:logo="@drawable/icon"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+            <intent-filter>
+
+                <!--
+                    <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                -->
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".ShareOptionsActivity"
+            android:label="@string/share_your_passcode"
+            android:parentActivityName=".MapsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name=".GpLicense"
+            android:label="@string/google_play_license"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service
+            android:name=".UpdateCurrentLocationService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <activity
+            android:name=".EnterCode"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.trackmylocation.co"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GetNameActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ShareWithContacts"
+            android:label="@string/title_activity_share_with_contacts" >
+        </activity>
+        <activity
+            android:name=".DeleteCode"
+            android:label="@string/title_activity_delete_code" >
+        </activity>
+        <activity
+            android:name=".FAQActivity"
+            android:label="@string/title_activity_faq"
+            android:parentActivityName=".MapsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name=".ChangeName"
+            android:label="@string/title_activity_change_name" >
+        </activity>
+        <activity
+            android:name=".UpdateSettings"
+            android:parentActivityName=".MapsActivity"
+            android:label="@string/title_activity_update_settings"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+       <!-- <item name="android:background">#428f89</item> -->
+       <!--   <item name="android:colorBackground">#428f89</item> -->
+        <item name="android:actionMenuTextColor">#FFFFFF</item>
+        <!--<item name="android:icon">@drawable/icon</item> -->
+        <item name="android:logo">@drawable/icon</item>
+    </style>
+
+
+    <style name="FAQTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">#428f89</item>
+      <!--  <item name="android:textStyle">bold</item> -->
+    </style>
+
+
+
+</resources>
